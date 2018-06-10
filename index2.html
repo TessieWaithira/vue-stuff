@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>event handling</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div id="app">
+
+		<button type="submit" @click="updateCount">
+			Increment Counter: {{ count }}
+		</button>
+		
+	</div> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.min.js"></script>
+
+	<script> 
+		new Vue({
+
+			el: '#app',
+
+			data: {
+				count: 0
+			},
+
+			methods: {
+				updateCount: function(){
+					this.count += 1;
+				}
+			}
+
+
+		});
+	</script>
+	
+</body>
+</html>
